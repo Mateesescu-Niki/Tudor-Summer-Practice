@@ -1,0 +1,1038 @@
+{
+	"info": {
+		"_postman_id": "6c0b3c1a-b524-4105-8697-306eea205f5f",
+		"name": "TudorPortal.Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21693350"
+	},
+	"item": [
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Get All Comments",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Comment",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comment By Topic Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Comment/topics2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Comment",
+								"topics2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Comment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"commentitself\": \"string\",\r\n  \"userId\": 0,\r\n  \"topicsId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Comment",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"commentitself\": \"string\",\r\n  \"userId\": 0,\r\n  \"user\": {\r\n    \"id\": 0,\r\n    \"firstName\": \"string\",\r\n    \"lastName\": \"string\",\r\n    \"email\": \"string\",\r\n    \"avatar\": \"string\",\r\n    \"hashedpassword\": \"string\",\r\n    \"isAdministrator\": true,\r\n    \"topics\": [\r\n      {\r\n        \"id\": 0,\r\n        \"title\": \"string\",\r\n        \"content\": \"string\",\r\n        \"topiccreated\": \"2022-08-01T08:42:15.711Z\",\r\n        \"status\": 0,\r\n        \"picture\": \"string\",\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"comment\": [\r\n          \"string\"\r\n        ],\r\n        \"topicLikes\": [\r\n          {\r\n            \"id\": 0,\r\n            \"numberOfLikes\": 0,\r\n            \"userId\": 0,\r\n            \"user\": \"string\",\r\n            \"topicId\": 0,\r\n            \"topic\": \"string\"\r\n          }\r\n        ]\r\n      }\r\n    ],\r\n    \"event\": [\r\n      {\r\n        \"id\": 0,\r\n        \"title\": \"string\",\r\n        \"content\": \"string\",\r\n        \"eventcreated\": \"2022-08-01T08:42:15.711Z\",\r\n        \"picture\": \"string\",\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"eventLikes\": [\r\n          {\r\n            \"id\": 0,\r\n            \"numberOfLikes\": 0,\r\n            \"eventId\": 0,\r\n            \"event\": \"string\",\r\n            \"userId\": 0,\r\n            \"user\": \"string\"\r\n          }\r\n        ]\r\n      }\r\n    ],\r\n    \"comment\": [\r\n      \"string\"\r\n    ],\r\n    \"topicLikes\": [\r\n      {\r\n        \"id\": 0,\r\n        \"numberOfLikes\": 0,\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"topicId\": 0,\r\n        \"topic\": \"string\"\r\n      }\r\n    ],\r\n    \"eventLikes\": [\r\n      {\r\n        \"id\": 0,\r\n        \"numberOfLikes\": 0,\r\n        \"eventId\": 0,\r\n        \"event\": \"string\",\r\n        \"userId\": 0,\r\n        \"user\": \"string\"\r\n      }\r\n    ]\r\n  },\r\n  \"topicsId\": 0,\r\n  \"topics\": {\r\n    \"id\": 0,\r\n    \"title\": \"string\",\r\n    \"content\": \"string\",\r\n    \"topiccreated\": \"2022-08-01T08:42:15.711Z\",\r\n    \"status\": 0,\r\n    \"picture\": \"string\",\r\n    \"userId\": 0,\r\n    \"user\": \"string\",\r\n    \"comment\": [\r\n      \"string\"\r\n    ],\r\n    \"topicLikes\": [\r\n      {\r\n        \"id\": 0,\r\n        \"numberOfLikes\": 0,\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"topicId\": 0,\r\n        \"topic\": \"string\"\r\n      }\r\n    ]\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Comment",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Comment",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Comment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "Get All Events",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Event",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Event By Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Event/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Event",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Event",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"string\",\r\n  \"content\": \"string\",\r\n  \"eventcreated\": \"2022-08-01T08:21:40.429Z\",\r\n  \"picture\": \"string\",\r\n  \"userId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Event",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Event",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"title\": \"string\",\r\n  \"content\": \"string\",\r\n  \"eventcreated\": \"2022-08-01T08:23:57.939Z\",\r\n  \"picture\": \"string\",\r\n  \"userId\": 0,\r\n  \"user\": {\r\n    \"id\": 0,\r\n    \"firstName\": \"string\",\r\n    \"lastName\": \"string\",\r\n    \"email\": \"string\",\r\n    \"avatar\": \"string\",\r\n    \"hashedpassword\": \"string\",\r\n    \"isAdministrator\": true,\r\n    \"topics\": [\r\n      {\r\n        \"id\": 0,\r\n        \"title\": \"string\",\r\n        \"content\": \"string\",\r\n        \"topiccreated\": \"2022-08-01T08:23:57.939Z\",\r\n        \"status\": 0,\r\n        \"picture\": \"string\",\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"comment\": [\r\n          {\r\n            \"id\": 0,\r\n            \"commentitself\": \"string\",\r\n            \"userId\": 0,\r\n            \"user\": \"string\",\r\n            \"topicsId\": 0,\r\n            \"topics\": \"string\"\r\n          }\r\n        ],\r\n        \"topicLikes\": [\r\n          {\r\n            \"id\": 0,\r\n            \"numberOfLikes\": 0,\r\n            \"userId\": 0,\r\n            \"user\": \"string\",\r\n            \"topicId\": 0,\r\n            \"topic\": \"string\"\r\n          }\r\n        ]\r\n      }\r\n    ],\r\n    \"event\": [\r\n      \"string\"\r\n    ],\r\n    \"comment\": [\r\n      {\r\n        \"id\": 0,\r\n        \"commentitself\": \"string\",\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"topicsId\": 0,\r\n        \"topics\": \"string\"\r\n      }\r\n    ],\r\n    \"topicLikes\": [\r\n      {\r\n        \"id\": 0,\r\n        \"numberOfLikes\": 0,\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"topicId\": 0,\r\n        \"topic\": \"string\"\r\n      }\r\n    ],\r\n    \"eventLikes\": [\r\n      {\r\n        \"id\": 0,\r\n        \"numberOfLikes\": 0,\r\n        \"eventId\": 0,\r\n        \"event\": \"string\",\r\n        \"userId\": 0,\r\n        \"user\": \"string\"\r\n      }\r\n    ]\r\n  },\r\n  \"eventLikes\": [\r\n    {\r\n      \"id\": 0,\r\n      \"numberOfLikes\": 0,\r\n      \"eventId\": 0,\r\n      \"event\": \"string\",\r\n      \"userId\": 0,\r\n      \"user\": \"string\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Event",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Event",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Event/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Event",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EventLike",
+			"item": [
+				{
+					"name": "Get All EventLikes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/EventLike",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"EventLike"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get EventLike by Event Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/EventLike/event/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"EventLike",
+								"event",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post EventLike",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numberOfLikes\": 0,\r\n  \"userId\": 0,\r\n  \"eventId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/EventLike",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"EventLike"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update EventLike",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"numberOfLikes\": 0,\r\n  \"eventId\": 0,\r\n  \"event\": {\r\n    \"id\": 0,\r\n    \"title\": \"string\",\r\n    \"content\": \"string\",\r\n    \"eventcreated\": \"2022-08-01T08:52:24.863Z\",\r\n    \"picture\": \"string\",\r\n    \"userId\": 0,\r\n    \"user\": {\r\n      \"id\": 0,\r\n      \"firstName\": \"string\",\r\n      \"lastName\": \"string\",\r\n      \"email\": \"string\",\r\n      \"avatar\": \"string\",\r\n      \"hashedpassword\": \"string\",\r\n      \"isAdministrator\": true,\r\n      \"topics\": [\r\n        {\r\n          \"id\": 0,\r\n          \"title\": \"string\",\r\n          \"content\": \"string\",\r\n          \"topiccreated\": \"2022-08-01T08:52:24.863Z\",\r\n          \"status\": 0,\r\n          \"picture\": \"string\",\r\n          \"userId\": 0,\r\n          \"user\": \"string\",\r\n          \"comment\": [\r\n            {\r\n              \"id\": 0,\r\n              \"commentitself\": \"string\",\r\n              \"userId\": 0,\r\n              \"user\": \"string\",\r\n              \"topicsId\": 0,\r\n              \"topics\": \"string\"\r\n            }\r\n          ],\r\n          \"topicLikes\": [\r\n            {\r\n              \"id\": 0,\r\n              \"numberOfLikes\": 0,\r\n              \"userId\": 0,\r\n              \"user\": \"string\",\r\n              \"topicId\": 0,\r\n              \"topic\": \"string\"\r\n            }\r\n          ]\r\n        }\r\n      ],\r\n      \"event\": [\r\n        \"string\"\r\n      ],\r\n      \"comment\": [\r\n        {\r\n          \"id\": 0,\r\n          \"commentitself\": \"string\",\r\n          \"userId\": 0,\r\n          \"user\": \"string\",\r\n          \"topicsId\": 0,\r\n          \"topics\": \"string\"\r\n        }\r\n      ],\r\n      \"topicLikes\": [\r\n        {\r\n          \"id\": 0,\r\n          \"numberOfLikes\": 0,\r\n          \"userId\": 0,\r\n          \"user\": \"string\",\r\n          \"topicId\": 0,\r\n          \"topic\": \"string\"\r\n        }\r\n      ],\r\n      \"eventLikes\": [\r\n        \"string\"\r\n      ]\r\n    },\r\n    \"eventLikes\": [\r\n      \"string\"\r\n    ]\r\n  },\r\n  \"userId\": 0,\r\n  \"user\": {\r\n    \"id\": 0,\r\n    \"firstName\": \"string\",\r\n    \"lastName\": \"string\",\r\n    \"email\": \"string\",\r\n    \"avatar\": \"string\",\r\n    \"hashedpassword\": \"string\",\r\n    \"isAdministrator\": true,\r\n    \"topics\": [\r\n      {\r\n        \"id\": 0,\r\n        \"title\": \"string\",\r\n        \"content\": \"string\",\r\n        \"topiccreated\": \"2022-08-01T08:52:24.863Z\",\r\n        \"status\": 0,\r\n        \"picture\": \"string\",\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"comment\": [\r\n          {\r\n            \"id\": 0,\r\n            \"commentitself\": \"string\",\r\n            \"userId\": 0,\r\n            \"user\": \"string\",\r\n            \"topicsId\": 0,\r\n            \"topics\": \"string\"\r\n          }\r\n        ],\r\n        \"topicLikes\": [\r\n          {\r\n            \"id\": 0,\r\n            \"numberOfLikes\": 0,\r\n            \"userId\": 0,\r\n            \"user\": \"string\",\r\n            \"topicId\": 0,\r\n            \"topic\": \"string\"\r\n          }\r\n        ]\r\n      }\r\n    ],\r\n    \"event\": [\r\n      \"string\"\r\n    ],\r\n    \"comment\": [\r\n      {\r\n        \"id\": 0,\r\n        \"commentitself\": \"string\",\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"topicsId\": 0,\r\n        \"topics\": \"string\"\r\n      }\r\n    ],\r\n    \"topicLikes\": [\r\n      {\r\n        \"id\": 0,\r\n        \"numberOfLikes\": 0,\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"topicId\": 0,\r\n        \"topic\": \"string\"\r\n      }\r\n    ],\r\n    \"eventLikes\": [\r\n      \"string\"\r\n    ]\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/EventLike",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"EventLike"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete EventLike",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/EventLike",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"EventLike"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Topics",
+			"item": [
+				{
+					"name": "Get All Topics",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Topics",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Topics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Topics By Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Topics/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Topics",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Topics",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"string\",\r\n  \"content\": \"string\",\r\n  \"topiccreated\": \"2022-08-01T08:57:01.348Z\",\r\n  \"status\": 0,\r\n  \"picture\": \"string\",\r\n  \"userId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Topics",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Topics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Topics",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"title\": \"string\",\r\n  \"content\": \"string\",\r\n  \"topiccreated\": \"2022-08-01T08:58:11.496Z\",\r\n  \"status\": 0,\r\n  \"picture\": \"string\",\r\n  \"userId\": 0,\r\n  \"user\": {\r\n    \"id\": 0,\r\n    \"firstName\": \"string\",\r\n    \"lastName\": \"string\",\r\n    \"email\": \"string\",\r\n    \"avatar\": \"string\",\r\n    \"hashedpassword\": \"string\",\r\n    \"isAdministrator\": true,\r\n    \"topics\": [\r\n      \"string\"\r\n    ],\r\n    \"event\": [\r\n      {\r\n        \"id\": 0,\r\n        \"title\": \"string\",\r\n        \"content\": \"string\",\r\n        \"eventcreated\": \"2022-08-01T08:58:11.496Z\",\r\n        \"picture\": \"string\",\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"eventLikes\": [\r\n          {\r\n            \"id\": 0,\r\n            \"numberOfLikes\": 0,\r\n            \"eventId\": 0,\r\n            \"event\": \"string\",\r\n            \"userId\": 0,\r\n            \"user\": \"string\"\r\n          }\r\n        ]\r\n      }\r\n    ],\r\n    \"comment\": [\r\n      {\r\n        \"id\": 0,\r\n        \"commentitself\": \"string\",\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"topicsId\": 0,\r\n        \"topics\": \"string\"\r\n      }\r\n    ],\r\n    \"topicLikes\": [\r\n      {\r\n        \"id\": 0,\r\n        \"numberOfLikes\": 0,\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"topicId\": 0,\r\n        \"topic\": \"string\"\r\n      }\r\n    ],\r\n    \"eventLikes\": [\r\n      {\r\n        \"id\": 0,\r\n        \"numberOfLikes\": 0,\r\n        \"eventId\": 0,\r\n        \"event\": \"string\",\r\n        \"userId\": 0,\r\n        \"user\": \"string\"\r\n      }\r\n    ]\r\n  },\r\n  \"comment\": [\r\n    {\r\n      \"id\": 0,\r\n      \"commentitself\": \"string\",\r\n      \"userId\": 0,\r\n      \"user\": \"string\",\r\n      \"topicsId\": 0,\r\n      \"topics\": \"string\"\r\n    }\r\n  ],\r\n  \"topicLikes\": [\r\n    {\r\n      \"id\": 0,\r\n      \"numberOfLikes\": 0,\r\n      \"userId\": 0,\r\n      \"user\": \"string\",\r\n      \"topicId\": 0,\r\n      \"topic\": \"string\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Topics",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Topics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Topics",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Topics",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Topics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TopicLike",
+			"item": [
+				{
+					"name": "Get All TopicLike",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/TopicLike",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"TopicLike"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get TopicLike By Topics Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/TopicLike/topic1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"TopicLike",
+								"topic1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post TopicLike",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numberOfLikes\": 0,\r\n  \"userId\": 0,\r\n  \"topicId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/TopicLike",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"TopicLike"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update TopicLike",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"numberOfLikes\": 0,\r\n  \"userId\": 0,\r\n  \"user\": {\r\n    \"id\": 0,\r\n    \"firstName\": \"string\",\r\n    \"lastName\": \"string\",\r\n    \"email\": \"string\",\r\n    \"avatar\": \"string\",\r\n    \"hashedpassword\": \"string\",\r\n    \"isAdministrator\": true,\r\n    \"topics\": [\r\n      {\r\n        \"id\": 0,\r\n        \"title\": \"string\",\r\n        \"content\": \"string\",\r\n        \"topiccreated\": \"2022-08-01T09:04:07.587Z\",\r\n        \"status\": 0,\r\n        \"picture\": \"string\",\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"comment\": [\r\n          {\r\n            \"id\": 0,\r\n            \"commentitself\": \"string\",\r\n            \"userId\": 0,\r\n            \"user\": \"string\",\r\n            \"topicsId\": 0,\r\n            \"topics\": \"string\"\r\n          }\r\n        ],\r\n        \"topicLikes\": [\r\n          \"string\"\r\n        ]\r\n      }\r\n    ],\r\n    \"event\": [\r\n      {\r\n        \"id\": 0,\r\n        \"title\": \"string\",\r\n        \"content\": \"string\",\r\n        \"eventcreated\": \"2022-08-01T09:04:07.587Z\",\r\n        \"picture\": \"string\",\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"eventLikes\": [\r\n          {\r\n            \"id\": 0,\r\n            \"numberOfLikes\": 0,\r\n            \"eventId\": 0,\r\n            \"event\": \"string\",\r\n            \"userId\": 0,\r\n            \"user\": \"string\"\r\n          }\r\n        ]\r\n      }\r\n    ],\r\n    \"comment\": [\r\n      {\r\n        \"id\": 0,\r\n        \"commentitself\": \"string\",\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"topicsId\": 0,\r\n        \"topics\": \"string\"\r\n      }\r\n    ],\r\n    \"topicLikes\": [\r\n      \"string\"\r\n    ],\r\n    \"eventLikes\": [\r\n      {\r\n        \"id\": 0,\r\n        \"numberOfLikes\": 0,\r\n        \"eventId\": 0,\r\n        \"event\": \"string\",\r\n        \"userId\": 0,\r\n        \"user\": \"string\"\r\n      }\r\n    ]\r\n  },\r\n  \"topicId\": 0,\r\n  \"topic\": {\r\n    \"id\": 0,\r\n    \"title\": \"string\",\r\n    \"content\": \"string\",\r\n    \"topiccreated\": \"2022-08-01T09:04:07.587Z\",\r\n    \"status\": 0,\r\n    \"picture\": \"string\",\r\n    \"userId\": 0,\r\n    \"user\": \"string\",\r\n    \"comment\": [\r\n      {\r\n        \"id\": 0,\r\n        \"commentitself\": \"string\",\r\n        \"userId\": 0,\r\n        \"user\": \"string\",\r\n        \"topicsId\": 0,\r\n        \"topics\": \"string\"\r\n      }\r\n    ],\r\n    \"topicLikes\": [\r\n      \"string\"\r\n    ]\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/TopicLike",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"TopicLike"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete TopicLike",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/TopicLike",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"TopicLike"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get User by Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/Users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"Users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Authentification",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"string\",\r\n  \"password\": \"string\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/Users/authenticate",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"Users",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
